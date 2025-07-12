@@ -56,7 +56,7 @@
 <span>Trecho ou palavra específica que pode ser estilizada com CSS, sem mudar o resto do texto</span>
 
 <!--Agrupadores Semânticos (estrutura com significado)-->
-<header> <!--Cabeçalho-->
+<header> <!--Cabeçalho que aparece na página (diferente de head, que é para definições da página)-->
     <h1>Nome do Site ou Página</h1>
     <nav> <!--Navegação, pode estar fora do header tbm-->
         <ul>
@@ -86,7 +86,7 @@
 
 <footer>
     <p>&copy; Ano Nome. Todos os direitos reservados.</p>
-    <p>Contato: <a href="email">email para clicar e já entrar em contato</a></p>
+    <p>Contato: <a href="mailto:seuemail">email para clicar e já entrar em contato</a></p>
 </footer>
 
 <!--Id, usado para marcar uma parte da página e poder usar como link interno-->
@@ -96,6 +96,75 @@
 </section>
 <a href="#id-da-seção">Ir para a seção</a>
 <!--Pode usar dentro de outros elementos ou agrupadores-->
+
+<!--Class, outra forma de classificar partes da página ou agrupadores, como o id-->
+<section class="classe-da-seção">
+    <h2>Seção com Classe</h2>
+    <p>Conteúdo desta seção.</p>
+</section>
+<a href="#classe-da-seção">Ir para a seção</a>
+
+
+
+
+
+<!--CSS: Cascading Style Sheets (Folhas de Estilo em Cascata)-->
+<!--Usado para estilizar o conteúdo do HTML (cores, fontes, tamanhos, posicionamento, etc.)-->
+
+<!--Pode ser usado de 3 formas:-->
+
+<!--1) CSS Inline: direto na tag, usado apenas em pedaços específicos de texto-->
+<p style="color: purple; font-size: 20px;">Texto roxo com tamanho 20px</p>
+
+<!--2) CSS Interno: dentro de <style> no <head> do HTML-->
+<head>
+    <style>
+        p {
+            color: cor de todods os parágrafos da página;
+            font-size: tamanho da fonte de todos os parágrafos da página;
+            font-family: tipo de letra de todos os parágrafos da página;
+        }
+    </style>
+</head>
+
+<!--3) CSS Externo: arquivo separado (.css), forma recomendada para usar-->
+<!--Crie um arquivo "nomedoarquivo.css" e coloque os estilos lá-->
+<!--Ligue o CSS ao HTML com a tag abaixo dentro do <head> (o rel="stylsheet" é fixo)-->
+<link rel="stylesheet" href="nomedoarquivo.css">
+
+
+
+<!--Estrutura do CSS:-->
+/* Comentário em CSS */
+oq vai ser estilizado (seletores){
+    color: valor da cor;
+    font-size: valor do tamanho;
+    font: tipo de letra;
+    ...
+}
+
+<!--Exemplo:-->
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+<!--Principais seletores():-->
+
+<!-- Seletor de elemento: aplica a todas as tags do tipo -->
+p { color: gray; }
+
+<!-- Seletor de classe: aplica aos elementos com class="nomedaclass" -->
+.nomedaclass { color: red; }
+
+<!-- Seletor de ID: aplica a elementos com id="iddoelemento" -->
+#iddoelemento { font-size: 32px; }
+
+<!-- Agrupamento de seletores -->
+h1, h2, p { font-family: Verdana; }
+
+<!-- Seletores de descendentes: aplica a elementos dentro de outros -->
+div p { color: blue; } <!-- Parágrafos dentro de divs */ -->
 
 
 </body>
